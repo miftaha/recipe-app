@@ -1,17 +1,15 @@
-const Card = () => {
+/* eslint-disable react/prop-types */
+const Card = ({ recipe }) => {
   return (
     <div className="card">
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCE-ZmH20TpGVBXpHOmZnhAIPUiW6JnXFvww&s"
-        alt=""
-      />
+      <img src={recipe.image} alt={recipe.name} />
       <div className="card-content">
-        <h3>title</h3>
+        <h3>{recipe.name}</h3>
         <div className="card-info">
           <div className="tag">
-            <p>healthy Eating</p>
+            <p>{recipe.tag}</p>
           </div>
-          <p className="time-text">30 mins</p>
+          <p className="time-text">{recipe.numberOfMinutes} mins</p>
         </div>
       </div>
     </div>
