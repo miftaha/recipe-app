@@ -1,12 +1,11 @@
+import { Outlet } from 'react-router-dom'
 import './App.css'
-import Header from './components/Header'
-import CardList from './components/CardList'
+
 function App() {
   return (
     <div className="App">
       <main className="main_container">
-        <Header />
-        <CardList />
+        <Outlet />
       </main>
     </div>
   )
