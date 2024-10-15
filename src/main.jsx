@@ -10,12 +10,14 @@ import {
 } from 'react-router-dom'
 import HomePage from './components/pages/HomePage.jsx'
 import AboutPage from './components/pages/AboutPage.jsx'
+import RecipePage from './components/pages/RecipePage.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<AboutPage />} />
+      <Route path="/recipe/:id" element={<RecipePage />} />
     </Route>
   )
 )
