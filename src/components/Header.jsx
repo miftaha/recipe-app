@@ -1,4 +1,14 @@
-const Header = () => {
+/* eslint-disable react/prop-types */
+import { useState } from 'react'
+
+const Header = ({ handleSearch }) => {
+  const [searchTerm, setSearchTerm] = useState('')
+
+  const handleClick = () => {
+    handleSearch(searchTerm)
+    setSearchTerm('')
+  }
+
   return (
     <header className="main_header">
       <div className="text-container">
@@ -11,8 +21,13 @@ const Header = () => {
           accusamus ipsum.
         </p>
         <div className="header-input-container">
-          <input type="text" placeholder="Find a recipe..." />
-          <button>Search</button>
+          <input
+            type="text"
+            placeholder="Find a recipe..."
+            onChange={(e) => setSearchTerm(e.target.value)}
+            value={searchTerm}
+          />
+          <button onClick={handleClick}>Search</button>
         </div>
       </div>
       <div>

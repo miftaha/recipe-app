@@ -8,9 +8,9 @@ import {
   Route,
   createRoutesFromElements,
 } from 'react-router-dom'
-import HomePage from './components/pages/HomePage.jsx'
-import AboutPage from './components/pages/AboutPage.jsx'
-import RecipePage from './components/pages/RecipePage.jsx'
+import HomePage from './pages/HomePage.jsx'
+import AboutPage from './pages/AboutPage.jsx'
+import RecipePage from './pages/RecipePage.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
